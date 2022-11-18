@@ -1,0 +1,163 @@
+
+
+<div class=" centrar">
+    <app-aside class="margen-derecho"></app-aside>   
+
+    <div class="section" id="prueba">  
+    <!-- <div class="mb-3 col-sm-2 offset-9">
+        <input class="form-control form-control">
+        <button class="btn btn-danger mt-2">Buscar</button>
+      </div> -->
+
+      <div class="mb-3 col-sm-2 offset-9 search-box">
+       <!-- <i class="bi bi-search"></i> -->
+        <input class="form-control search-icon" type="search" placeholder="Buscar" aria-label="Search"  automplete=’on’>
+        
+      </div>
+
+      
+
+     <div class="row">
+      <div class="mb-3 col-sm-1">  
+      <label for="exampleFormControlInput1" class="form-label">NOMBRE</label>
+      <input [ngModel]="inputvalueNombre" 
+      (ngModelChange)="inputvalueNombre = $event.toUpperCase()" class="form-control form-control" type="text" placeholder="Apellido" aria-label=".form-control-lg example">
+      </div>
+    <!--  <div class="mb-3 col-sm-3"> 
+      <label for="exampleFormControlInput1" class="form-label">NOMBRE</label>
+      <input (keyup)="mayus($event)" class="form-control form-control" type="text" placeholder="Nombre" aria-label=".form-control-lg example" >
+      </div>  -->     
+      
+       <div class="mb-3 col-sm-3"> 
+        <label for="exampleFormControlInput1" class="form-label">APELLIDO/RAZON SOCIAL</label>
+        <input [ngModel]="inputvalueApellido" 
+        (ngModelChange)="inputvalueApellido = $event.toUpperCase()" class="form-control form-control" type="text" placeholder="Nombre" aria-label=".form-control-lg example" >
+       </div>
+
+      <div class="mb-3 col-sm-3"> 
+        <label for="exampleFormControlInput1" class="form-label">TELEFONO</label>
+        <input class="form-control form-control" type="text" placeholder="Telefono" aria-label=".form-control-lg example">
+        </div>    
+      <div class="mb-3 col-sm-3">
+      <label for="exampleFormControlInput1" class="form-label">MOTIVO</label>
+      <select class="form-select" aria-label="Default select example">
+        <option selected></option>
+        <option value="compra">COMPRA</option>
+        <option value="consignacion">CONSIGNACION</option>    
+        <option value="venta">VENTA</option>  
+        <option value="permuta">PERMUTA</option>  
+        <option value="garantia">GARANTIA</option>  
+        <option value="pago">PAGO</option>          
+        <option value="entrega">ENTREGA</option>
+        <option value="gestoria">GESTORIA</option>
+        <option value="revisionMecanica">REVISION MECANICA</option>
+        <option value="yaVino">YA VINO</option>
+        <option value="proveedor">PROVEEDOR</option>
+        <option value="mutuales">MUTUALES</option>
+        <option value="varios">VARIOS</option>
+        <option value="indefinido">-</option>
+      </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="mb-3 col-sm-3">
+      <label for="exampleFormControlInput1" class="form-label">PROCEDENCIA</label>
+      <select class="form-select" aria-label="Default select example">
+        <option selected></option>
+        <option value="juan">JUAN</option>
+        <option value="nair">NAIR</option>            
+        <option value="wanda">WANDA</option>
+        <option value="aldana">ALDANA</option>
+        <option value="gino">GINO</option>
+        <option value="mariela">MARIELA</option>
+        <option value="lucas">LUCAS</option>
+        <option value="recomendado">RECOMENDADO</option>
+        <option value="agencia">AGENCIA</option>
+        <option value="alan">ALAN</option>
+        <option value="facebook">FACEBOOK</option>
+        <option value="instagram">INSTAGRAM</option>
+        <option value="mercadoLibre">MERCADO LIBRE</option>
+        <option value="rosarioGarage">ROSARIO GARAGE</option>
+        <option value="olx">OLX</option>
+        <option value="laCapital">LA CAPITAL</option>
+        <option value="web">WEB</option>
+        <option value="indefinido">N/A</option>
+      </select>
+      </div>
+      <div class="mb-3 col-sm-3">
+      <label for="exampleFormControlInput1" class="form-label">EMPLEADO</label>
+      <select class="form-select" aria-label="Default select example">
+        <option selected></option>
+        <option value="1">JUAN</option>
+        <option value="1">NAIR</option>    
+        <option value="1">ALDANA</option>
+        <option value="1">GINO</option>
+        <option value="1">LUCAS</option>
+        <option value="1">ALAN</option>
+        <option value="1">MECANICO</option>
+        <option value="1">SOLEDAD L.</option>
+        <option value="1">SOLEDAD</option>
+        <option value="1">EZEQUIEL</option>
+        <option value="1">-</option>        
+      </select>
+      </div>
+
+   
+      <div class="mb-3 col-sm-4">
+        <label for="exampleFormControlInput1" class="form-label">OBSERVACIONES</label>
+        <input [ngModel]="inputvalueObservaciones" 
+        (ngModelChange)="inputvalueObservaciones = $event.toUpperCase()" class="form-control form-control" type="text" placeholder="Informacion importante" aria-label=".form-control-lg example" style="outline:none">
+        </div>
+
+          <!--Select de prueba___________________-->
+
+       <div class="selectbox mb-3 col-sm-4">
+        <label for="exampleFormControlInput1" class="form-label">OBSERVACIONES</label>
+				<div class="select" id="select">          
+					<div class="contenido-select">
+					<!--	<h1 class="titulo">Selecciona tu pais</h1>	-->
+        
+					</div>
+					<i class="bi bi-chevron-compact-down"></i>
+				</div>
+
+				<div class="opciones" id="opciones">
+					<a href="#" class="opcion">
+						<div class="contenido-opcion">							
+							<div class="textos">
+								<h1 class="titulo">Mexico</h1>								
+							</div>
+						</div>
+					</a>
+					<a href="#" class="opcion">
+						<div class="contenido-opcion">							
+							<div class="textos">
+								<h1 class="titulo">España</h1>							
+							</div>
+						</div>
+					</a>
+					<a href="#" class="opcion">
+						<div class="contenido-opcion">							
+							<div class="textos">
+								<h1 class="titulo">Colombia</h1>							
+							</div>
+						</div>
+					</a>		
+				</div>
+			</div>
+			<input type="hidden" name="pais" id="inputSelect" value="">
+      <!--fin de la prueba _________________________________-->
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-5 guardar mb-5">
+            <button class="btn btn-danger boton-guardar-registro" type="button" (click)="nuevoIngreso()">Guardar</button>
+            <button class="btn btn-light boton-cancelar-registro" type="button">Cancelar</button>
+        </div>
+        <app-tabla-recepcion></app-tabla-recepcion>
+    </div>   
+ 
+   
+
+    </div>
+     
+</div>

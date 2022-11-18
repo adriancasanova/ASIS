@@ -1,0 +1,36 @@
+
+.card-aside {
+    background-color: rgba(0, 0, 0, 0.883);
+    height: 100%;
+    width: 100%;   
+    padding-top: 3rem;
+    margin-right: 1rem;
+    border-right: 0.27rem solid rgb(98, 97, 97);
+}
+ul li {
+    font-family: 'Roboto', sans-serif;
+/*font-family: 'Roboto Mono', monospace;
+font-family: 'Staatliches', cursive; */
+    font-size: 1.1rem;
+    margin-left: 1rem;
+    color: rgb(241, 239, 239);
+    padding: 0.7rem;
+}
+
+ul li a {
+    color: rgb(241, 239, 239);
+    text-decoration: none;
+}
+
+select i {
+    color: rgb(241, 239, 239);
+}
+
+
+  
+
+
+
+
+
+

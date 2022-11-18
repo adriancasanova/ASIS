@@ -1,0 +1,220 @@
+.centrar {
+    display: flex;
+    width: 100%;
+   
+}
+
+.section {      
+    margin-top: 3rem;
+   
+    width: 80%;
+    padding-top: 1rem;
+    margin-left: 2rem;
+}  
+.margen-derecho {
+    margin-right: 2rem;
+}
+
+
+/*Estilo de los input*/
+.search-box {
+	display: flex;
+}
+.search-icon {
+	height: 35px !important;
+}
+
+  .section input {
+    font-family: Inter !important;
+    font-size: 1.3rem !important;
+    font-weight: 400; 
+    display: block;     
+    border-radius: 0.2rem;    
+    border: none;   
+    border-bottom: 0.2rem solid rgb(245, 22, 22); 
+    font-size: 1rem;
+  }
+ 
+ 
+  
+  
+  ::placeholder {
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000103;
+    opacity: 0.4;
+  }
+
+
+ 
+  input:focus, select:focus, select, input.form-control:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+   
+}
+
+.section select {
+  font-family: Inter !important;
+  font-size: 1.3rem !important;
+  font-weight: 400; 
+  display: block;     
+  border-radius: 0.2rem;    
+  border: none;   
+  border-bottom: 0.2rem solid rgb(245, 22, 22); 
+  font-size: 1rem; 
+}
+input:focus, select:focus {
+  border-bottom: 0.25rem solid rgb(245, 22, 22) !important; 
+  width: 102% !important; 
+}
+
+
+.boton-guardar-registro:hover {
+  transition: 0.2s;
+  background-color : rgba(151, 15, 15, 0.883);
+  font-size: 1.1rem; 
+}
+
+.boton-cancelar-registro:hover {
+  transition: 0.2s;
+  background-color : rgba(175, 172, 172, 0.883);
+  font-size: 1.1rem; 
+}
+
+
+
+
+/* prueba para crear select personalizado*/
+
+
+
+
+a {
+	text-decoration: none;
+}
+
+/*
+.selectbox {
+	width: 30%;
+	margin: auto;
+	position: relative;
+} */
+
+.select {
+	background: #fff;
+	width: 60%;
+/*	box-shadow: 0px 0px 0px rgba(0, 0, 0, .16); */
+	border-radius: 2px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+/*	transition: .2s ease all; 
+	margin-bottom: 30px; */
+	padding: 5px;
+	position: relative;
+	z-index: 200;
+	border-bottom: 2px solid red;
+}
+
+/*
+.select.active,
+.select:hover {
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+	border: 2px solid #213f8f;
+} */
+/*
+.select.active:before {
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+	border-top: 15px solid #213f8f;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid transparent;
+	position: absolute;
+	bottom: -30px;
+	left: calc(50% - 15px);
+} */
+
+.select i {
+	font-size: 20px;
+	margin-left: 30px;
+	color: #000000;
+}
+
+.titulo {
+	margin-bottom: 10px;
+	color: #000;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+
+
+.opciones {
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: 0px 5px 10px rgba(0,0,0,.16);
+	max-height: 400px;
+	overflow: auto;
+	z-index: 100;
+	width: 60%;
+	display: none;
+}
+
+.opciones.active {
+	display: block;
+	/*animation: fadeIn .3s forwards; */
+}
+/*
+@keyframes fadeIn {
+	from {
+		transform: translateY(-200px) scale(.5);
+	}
+	to {
+		transform: translateY(0) scale(1);
+	}
+} */
+
+.contenido-opcion {
+	width: 100%;
+	display: flex;
+	align-items: center;
+/*	transition: .2s ease all; */
+}
+
+.opciones .contenido-opcion {
+	padding: 10px;
+}
+
+/*
+.contenido-opcion img {
+	width: 60px;
+	height: 60px;
+	margin-right: 30px;
+} */
+
+.opciones .contenido-opcion:hover {
+	border-bottom: 0.2rem solid rgb(245, 22, 22);
+	
+}
+/*
+.opciones .contenido-opcion:hover .titulo,
+.opciones .contenido-opcion:hover .descripcion {
+	color: #fff;
+} */
+
+@media screen and (max-width: 800px){
+	.selectbox {
+		width: 100%;
+	}
+}

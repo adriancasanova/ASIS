@@ -1,0 +1,51 @@
+<div class="ContenidoTabla">
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1"> <img src="./assets/imagenes/search.png" class="input-icon"></span>
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" (change)="findAll()" automplete=’on’>
+  </div>
+  
+   <div id="div1">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">NRO</th>
+          <th scope="col">APELLIDO Y NOMBRE</th>
+          <th scope="col">TELEFONO</th>
+          <th scope="col">MOTIVO</th>
+          <th scope="col">PROCEDENCIA</th>
+          <th scope="col">EMPLEADO</th>
+          <th scope="col">OBSERVACIONES</th>
+         
+        <!--  <th scope="col">Acciones</th> -->
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dat of data; let i = index">
+          <th scope="row">{{dat.nro}}</th>
+          <td>{{dat.apellidoNombre}}</td>
+         <!-- <td><i class="bi bi-star"></i></td> -->
+         <td>{{dat.telefono}}</td>
+          <td>{{dat.motivo}}</td>
+          <td>{{dat.procedencia}}</td>
+          <td>{{dat.empleado}}</td>
+          <td>{{dat.observaciones}}</td>
+       
+  
+         <!--   <td>
+              <a href="" routerLink="/editar-receta"><i class="bi bi-pencil-fill p-1"></i></a>
+              <a href=""><i class="bi bi-eye-fill p-1"></i></a>
+              <a href=""><i class="bi bi-plus-lg p-1"></i></a>
+              <a href=""><i class="bi bi-trash3-fill p-1"></i></a>
+              
+            </td> -->
+  
+  
+  
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  
+  

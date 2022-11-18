@@ -1,0 +1,16 @@
+.ContenidoTabla {
+    width: 85%;
+  
+}
+#div1 {
+    overflow:scroll;
+    height:670px;
+    width:100%;
+}
+#div1 table {
+   width: 100%;  
+}
+
+.pagination {
+    margin-bottom: 0px !important;
+}

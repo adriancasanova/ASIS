@@ -1,0 +1,33 @@
+   
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">    
+  <div class="login" #alerta>
+    
+      <form
+        class="custom-form"          
+        method=""     
+        (ngSubmit)="login($event)"
+        [formGroup]="loginForm"    
+      >
+        <h2 class="text-center">Inicie sesión</h2>         
+        <input
+          type="email"
+          formControlName="email"
+          placeholder="Usuario"
+          required="required"       
+        />
+        <input
+          type="password"
+          formControlName="password"
+          placeholder="Contraseña"
+          required="required"
+        />
+     
+        <button type="submit" [disabled]="loading">{{loading ? 'Cargando.....' : 'Login'}} </button>       
+      </form>
+      
+    </div>
+    
+    
+  </div>
+  
+  
