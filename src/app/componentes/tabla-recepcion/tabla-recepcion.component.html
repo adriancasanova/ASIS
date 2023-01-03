@@ -1,51 +1,98 @@
-<div class="ContenidoTabla">
-<div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1"> <img src="./assets/imagenes/search.png" class="input-icon"></span>
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" (change)="findAll()" automplete=’on’>
-  </div>
+
+<div class="centrar">
   
-   <div id="div1">
-    <table class="table">
+<app-aside ></app-aside>    
+
+
+{{ message }}
+
+    
+<div class="section ">
+
+  <app-formulario-ingreso (messageEvent)="receiveMessage($event)"></app-formulario-ingreso>
+
+<div class="ContenidoTabla " >
+<div class="mb-5 col-sm-4  search-box" > 
+
+   <input class="form-control me-2" type="search" placeholder="Buscar" name="filterPost"
+   aria-label="Search" [(ngModel)]="filterPost"
+   [ngModel]="inputBuscar" 
+  (ngModelChange)="inputBuscar = $event.toUpperCase()"
+   >
+</div>
+ 
+   <div id="div1" >
+    
+      <table class="table" >
       <thead>
-        <tr>
+        <tr >
           <th scope="col">NRO</th>
-          <th scope="col">APELLIDO Y NOMBRE</th>
-          <th scope="col">TELEFONO</th>
+          <th scope="col">TIPO DE PROSPECTO</th>
+          <th scope="col">NOMBRE Y APELLIDO</th>
+          <th scope="col">DNI</th>
+          <th scope="col">NRO DE CONTACTO</th>
           <th scope="col">MOTIVO</th>
+          <th scope="col">DEPARTAMENTO</th>
           <th scope="col">PROCEDENCIA</th>
           <th scope="col">EMPLEADO</th>
           <th scope="col">OBSERVACIONES</th>
          
-        <!--  <th scope="col">Acciones</th> -->
+    
           
         </tr>
       </thead>
-      <tbody>
-        <tr *ngFor="let dat of data; let i = index">
-          <th scope="row">{{dat.nro}}</th>
-          <td>{{dat.apellidoNombre}}</td>
-         <!-- <td><i class="bi bi-star"></i></td> -->
-         <td>{{dat.telefono}}</td>
-          <td>{{dat.motivo}}</td>
-          <td>{{dat.procedencia}}</td>
-          <td>{{dat.empleado}}</td>
-          <td>{{dat.observaciones}}</td>
+      <tbody  >
+    <tr *ngFor="let data of recepcionData  | filter:filterPost" > 
+         
+          <th scope="row">{{data.nro}}</th>
+          <td>{{data.tipoDeProspecto}}</td>
+          <td>{{data.nombreApellido}}</td>
        
-  
+         <td>{{data.dni}}</td>
+          <td>{{data.nroContacto}}</td>
+          <td>{{data.motivo}}</td>
+          <td>{{data.departamento}}</td>
+          <td>{{data.procedencia}}</td>
+          <td>{{data.empleado}}</td>
+          <td>{{data.observaciones}}</td>
+        
+    
+
+
          <!--   <td>
               <a href="" routerLink="/editar-receta"><i class="bi bi-pencil-fill p-1"></i></a>
               <a href=""><i class="bi bi-eye-fill p-1"></i></a>
               <a href=""><i class="bi bi-plus-lg p-1"></i></a>
               <a href=""><i class="bi bi-trash3-fill p-1"></i></a>
               
-            </td> -->
+            </td> --> 
   
   
   
-        </tr>
+            </tr>
       </tbody>
-    </table>
-  </div>
-  </div>
+    </table> 
+  
+
+
+  
+    
+    
+      <!--  <tr *ngFor="let data of recepcionData  | filter:filterPost" > -->
+        
+        
+    
+
+
+         
   
   
+  
+           
+      
+   
+
+  </div>
+  </div> 
+</div>
+</div>

@@ -17,6 +17,12 @@ import { FormularioIngresoComponent } from './componentes/formulario-ingreso/for
 import { TablaRecepcionComponent } from './componentes/tabla-recepcion/tabla-recepcion.component';
 import { InterceptorService } from './servicios/interceptor.service';
 import { SelectService } from './servicios/select.service';
+import { SelectAsideService } from './servicios/select-aside.service';
+import { FilterPipe } from './pipes/filter.pipe';
+import { VendedorComponent } from './componentes/vendedor/vendedor.component';
+import { TablaVendedorComponent } from './componentes/tabla-vendedor/tabla-vendedor.component';
+import { HelperServiceService } from './servicios/helper-service.service';
+import { ComponentePrincipalComponent } from './componentes/componente-principal/componente-principal.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,11 @@ import { SelectService } from './servicios/select.service';
     RecepcionComponent,
     InicioComponent,
     FormularioIngresoComponent,
-    TablaRecepcionComponent
+    TablaRecepcionComponent,
+    FilterPipe,
+    VendedorComponent,
+    TablaVendedorComponent,
+    ComponentePrincipalComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +49,7 @@ import { SelectService } from './servicios/select.service';
     HttpClientModule
   ],
   providers: [RecepcionComponent, 
-    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}, SelectService
+    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}, SelectService, SelectAsideService, HelperServiceService
   ],
   bootstrap: [AppComponent]
 })
